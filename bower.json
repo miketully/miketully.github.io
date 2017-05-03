@@ -1,0 +1,14 @@
+{
+  "name": "mike-tully",
+  "description": "Mike's site",
+  "main": "",
+  "private": true,
+  "dependencies": {
+    "slick-carousel": "^1.6.0",
+    "jquery": "^3.2.1",
+    "moment": "^2.18.1"
+  },
+  "devDependencies": {
+    "breakpoint-sass": "^2.7.1"
+  }
+}

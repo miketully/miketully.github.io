@@ -1,0 +1,8 @@
+*DS_Store
+npm-debug.log
+
+.publish/
+node_modules/
+bower_components/
+
+.dev/*

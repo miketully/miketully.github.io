@@ -1,0 +1,96 @@
+%text--large,
+.text--large {
+  font-size: 1.5rem;
+  line-height: 1.33;
+  text-indent: 2em;
+
+  @include breakpoint(max-width get-breakpoint(tablet)) {
+    font-size: 1.4rem;
+  }
+
+  @include breakpoint(max-width get-breakpoint(phablet)) {
+    font-size: 1.2rem;
+  }
+}
+
+%text--normal,
+.text--normal {
+  font-size: 1.25rem;
+  line-height: 1.4;
+  text-indent: 2em;
+
+  @include breakpoint(max-width get-breakpoint(phablet)) {
+    font-size: 1.1rem;
+  }
+}
+
+%text--small,
+.text--small {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+%text--light,
+.text--light {
+  font-weight: 300;
+}
+
+%text--regular,
+.text--regular {
+  font-weight: 400;
+}
+
+%text--center,
+.text--center {
+  text-align: center;
+}
+
+@include each-breakpoint {
+  %#{'text--left-' + $breakpoint-name},
+  .#{'text--left-' + $breakpoint-name} {
+    text-align: left;
+  }
+
+  %#{'text--center-' + $breakpoint-name},
+  .#{'text--center-' + $breakpoint-name} {
+    text-align: center;
+  }
+}
+
+body {
+  @extend %text--light;
+  font-family: 'Brando Light';
+  font-size: 100%;
+  hyphens: auto;
+  line-height: 1.5;
+}
+
+h3 {
+  border-bottom: 1px solid $white;
+  display: inline-block;
+  line-height: 1.2em;
+  margin-bottom: .5em;
+
+  + p {
+    @extend %vertical-margin-0;
+  }
+}
+
+p {
+  @extend %vertical-margin-1;
+
+  &:first-child,
+  &:only-child {
+    @extend %vertical-margin-0;
+  }
+}
+
+a {
+  border-bottom: 1px dotted $white;
+
+  &:hover,
+  &:focus {
+    border-bottom: 1px solid $white;
+    cursor: alias;
+  }
+}

@@ -1,0 +1,19 @@
+$breakpoints: (
+  phone: 0,
+  phablet: 640px,
+  tablet: 768px,
+  desktop: 1024px
+);
+
+@function get-breakpoint($name) {
+  @return map-get($breakpoints, $name);
+}
+
+@mixin each-breakpoint {
+  @each $name, $breakpoint in $breakpoints {
+    $breakpoint-name: $name !global;
+    @include breakpoint($breakpoint) {
+      @content;
+    }
+  }
+}

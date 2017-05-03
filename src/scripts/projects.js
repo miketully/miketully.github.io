@@ -1,0 +1,1 @@
+$('.project__images').slick();

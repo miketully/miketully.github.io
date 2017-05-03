@@ -1,0 +1,86 @@
+@mixin vertical-rhythm(
+  $multiplier,
+  $property: 'margin',
+  $increment: 1rem,
+  $important: false
+) {
+  // sass-lint:disable-block no-important
+  @if ($property == 'margin') {
+    @if ($important) {
+      margin-top: #{$multiplier * $increment} !important;
+    } @else {
+      margin-top: #{$multiplier * $increment};
+    }
+  } @else if ($property == 'padding') {
+    @if ($important) {
+      padding-top: #{$multiplier * $increment} !important;
+    } @else {
+      padding-top: #{$multiplier * $increment};
+    }
+  }
+}
+
+@mixin vertical-rhythm-classes(
+  $class: 'vertical-',
+  $count: 12
+) {
+  @for $i from 0 through $count {
+    @if ($i == 1) {
+      %#{$class + 'margin-half'} {
+        @include vertical-rhythm(.5);
+      }
+
+      .#{$class + 'margin-half'} {
+        @include vertical-rhythm(.5, $important: true);
+      }
+
+      %#{$class + 'padding-half'} {
+        @include vertical-rhythm(.5, 'padding');
+      }
+
+      .#{$class + 'padding-half'} {
+        @include vertical-rhythm(.5, 'padding', $important: true);
+      }
+    }
+
+    %#{$class + 'margin-' + $i} {
+      @include vertical-rhythm($i);
+    }
+
+    .#{$class + 'margin-' + $i} {
+      @include vertical-rhythm($i, $important: true);
+    }
+
+    %#{$class + 'padding-' + $i} {
+      @include vertical-rhythm($i, 'padding');
+    }
+
+    .#{$class + 'padding-' + $i} {
+      @include vertical-rhythm($i, 'padding', $important: true);
+    }
+  }
+
+  @include each-breakpoint {
+    @for $i from 0 through $count {
+      @if $i == 1 {
+        .#{$class + 'margin-half-' + $i + '-' + $breakpoint-name} {
+          @include vertical-rhythm(.5, $important: true);
+        }
+
+        .#{$class + 'padding-half-' + $i + '-' + $breakpoint-name} {
+          @include vertical-rhythm(.5, 'padding', $important: true);
+        }
+      }
+
+      .#{$class + 'margin-' + $i + '-' + $breakpoint-name} {
+        @include vertical-rhythm($i, $important: true);
+      }
+
+      .#{$class + 'padding-' + $i + '-' + $breakpoint-name} {
+        @include vertical-rhythm($i, 'padding', $important: true);
+      }
+    }
+  }
+}
+
+@include vertical-rhythm-classes;

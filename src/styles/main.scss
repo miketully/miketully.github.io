@@ -1,0 +1,32 @@
+// sass-lint:disable clean-import-paths
+
+$slick-font-family: 'nein'; // fix for errorneous font inclusion
+
+@import 'reset';
+@import 'breakpoint';
+@import 'breakpoints';
+@import 'colors';
+@import 'fonts';
+@import 'slick.scss';
+@import 'slick-theme.scss';
+@import 'slick-overrides';
+@import 'animations';
+@import 'vertical-rhythm';
+@import 'css-columns';
+@import 'grid';
+@import 'typography';
+@import 'clock';
+
+body {
+  animation: fade-in ease-in 1s forwards;
+  background: $black;
+  color: $white;
+  padding-bottom: 80px;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+@import 'projects';

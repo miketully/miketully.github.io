@@ -1,0 +1,35 @@
+.project {
+  @extend %vertical-margin-6;
+  @extend %text--normal;
+}
+
+.project__images {
+  .slick-track {
+    align-items: center;
+    display: flex;
+    flex-flow: row nowrap;
+  }
+}
+
+.project__slide {
+  img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.project__text {
+  @extend %vertical-margin-2;
+  @extend %row;
+  @extend %row--narrow;
+}
+
+.project__details {
+  @extend %vertical-margin-2;
+  @extend %text--small;
+  @extend %text--center;
+
+  p {
+    text-indent: 0;
+  }
+}
