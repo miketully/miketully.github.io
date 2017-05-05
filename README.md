@@ -9,6 +9,7 @@
 ## Local development
 
 ```
+git pull
 npm run dev
 ```
 
