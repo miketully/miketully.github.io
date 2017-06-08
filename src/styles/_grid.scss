@@ -69,12 +69,18 @@ $row-narrow-width: 800px;
 
   > div {
     display: flex;
-    flex: 1 1 33.3%;
+    flex: 1 0 auto;
     flex-flow: column nowrap;
-    width: 33.3%;
 
-    &:nth-child(2),
-    &:nth-child(3) {
+    &:nth-child(1) {
+      flex: 1 1 40%;
+    }
+
+    &:nth-child(2) {
+      align-items: center;
+    }
+
+    &:last-child {
       align-items: flex-end;
     }
   }
