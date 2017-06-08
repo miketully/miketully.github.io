@@ -1,7 +1,7 @@
 %text--large,
 .text--large {
   font-size: 1.5rem;
-  line-height: 1.33;
+  line-height: 1.34;
   text-indent: 2em;
 
   @include breakpoint(max-width get-breakpoint(tablet)) {
