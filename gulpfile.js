@@ -31,6 +31,7 @@ const sassPaths = [
 
 const jsPaths = [
   `${paths.bower}/jquery/dist/jquery.js`,
+  `${paths.bower}/jquery.easing/js/jquery.easing.js`,
   `${paths.bower}/slick-carousel/slick/slick.js`,
   `${paths.bower}/moment/moment.js`,
   `${paths.src}/scripts/**/*.js`
