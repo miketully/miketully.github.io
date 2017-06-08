@@ -1,7 +1,6 @@
 const $anchors = $('a[href^="#"]');
 
 $anchors.click(function (e) {
-  console.log('anchor clicked');
   const $link = $(this);
   const $target = $($link.attr('href'));
   if ($target.length > 0) {

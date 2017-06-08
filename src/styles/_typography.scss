@@ -10,6 +10,7 @@
 
   @include breakpoint(max-width get-breakpoint(phablet)) {
     font-size: 1.2rem;
+    hyphens: auto;
   }
 }
 
