@@ -92,4 +92,8 @@ a {
     border-bottom: 1px solid $white;
     cursor: alias;
   }
+
+  &[href*='#'] {
+    border-bottom-color: $yellow;
+  }
 }
