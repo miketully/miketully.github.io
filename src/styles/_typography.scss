@@ -92,8 +92,40 @@ a {
     border-bottom: 1px solid $white;
     cursor: alias;
   }
+}
 
-  &[href*='#'] {
+.link--yellow {
+  border-bottom-color: $yellow;
+
+  &:hover,
+  &:focus {
     border-bottom-color: $yellow;
+  }
+}
+
+.link--red {
+  border-bottom-color: $red;
+
+  &:hover,
+  &:focus {
+    border-bottom-color: $red;
+  }
+}
+
+.link--green {
+  border-bottom-color: $green;
+
+  &:hover,
+  &:focus {
+    border-bottom-color: $green;
+  }
+}
+
+.link--blue {
+  border-bottom-color: $blue;
+
+  &:hover,
+  &:focus {
+    border-bottom-color: $blue;
   }
 }

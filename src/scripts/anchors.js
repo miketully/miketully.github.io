@@ -6,7 +6,7 @@ $anchors.click(function (e) {
   if ($target.length > 0) {
     $('html, body').animate({
         scrollTop: $target.offset().top
-    }, 500, 'easeOutCubic');
+    }, 2000, 'easeOutCubic');
   }
   e.preventDefault();
 });
