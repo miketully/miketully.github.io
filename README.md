@@ -21,3 +21,4 @@ git add .
 git commit -m "[description of changes]"
 git push
 ```
+# AMS-Templates
