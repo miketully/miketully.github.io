@@ -9,16 +9,18 @@
 ## Local development
 
 ```
-git pull
+cd miketully.github.io
 npm run dev
 ```
 
+Only make changes to files in the `src` directory.
+
+When you're finished making changes, stop the dev server by typing `CTRL`+`C`
+
 ## Deployment
+
+Before staging, committing, and pushing your changes to git, compile the files in the `src` directory by running:
 
 ```
 npm run build
-git add .
-git commit -m "[description of changes]"
-git push
 ```
-# AMS-Templates
