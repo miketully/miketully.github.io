@@ -1,6 +1,8 @@
  
  
- /* Styles */
+/***************************** 
+    Styles 
+******************************/
 
 * {
 
@@ -22,23 +24,36 @@
 
 
 @font-face {
-  font-family: "Common Serif Regular";
-  src:  url("fonts/CommonSerifLoBeta7-Regular.otf") format("otf"),
-  		url('CommonSerifLoBeta7-Regular.woff2') format('woff2'),
-        url('CommonSerifLoBeta7-Regular.woff') format('woff');
+  font-family: 'Common Serif Regular';
+  src:  url('fonts/CommonSerifLoBeta7-Regular.otf') format('otf'),
+        url('fonts/CommonSerifLoBeta7-Regular.woff2') format('woff2'),
+        url('fonts/CommonSerifLoBeta7-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'True Sans Regular';
+  src:  url('fonts/TrueSans-Regular.otf') format('otf'),
+        url('fonts/TrueSans-Regular.woff2') format('woff2'),
+        url('fonts/TrueSans-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 
+/***************************** 
+    Layout
+******************************/
 
 .container {
 
   font-family: "Common Serif Regular", Times, serif;
-  font-size: 32px;
+  font-size: 18px;
   line-height: 1.25em;
   color: DimGray;
   text-align:center;
+  margin-bottom:3em;
 
 
     -webkit-column-count: 1;
@@ -58,6 +73,20 @@
 p {
   text-align:left;
 }
+
+p.header {
+  margin-top:0;
+  margin-bottom:1em;
+}
+
+p.info {
+  margin-top:0;
+  margin-bottom:1em;
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+       break-inside: avoid;
+}
+
 
 p.footer {
 	margin-top:1.5em;
@@ -85,18 +114,61 @@ a:hover {
   text-decoration: none;
 }
 
+.expand {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+
+/***************************** 
+    Projects
+******************************/
+
+.projects {
+  margin-top:1em;
+  
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  column-count: 2;
+
+  -webkit-column-gap: 20px;
+  -moz-column-gap: 20px;
+  column-gap: 20px;
+ }
+
+.projects img {
+  max-width: 100%;
+  text-align:left;
+ }
+
+.caption {
+  margin-top:.5em;
+	font-family: "True Sans Regular", Arial, sans-serif;
+  	text-align: center;
+  	font-size: .65em;
+    line-height: 1.25em;
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+         break-inside: avoid;
+  }
 
 
 
 
-  /* Mobile */
 
- @media only screen and (max-width: 900px) {
+
+ 
+/***************************** 
+    Mobile 
+******************************/
+
+
+ @media only screen and (max-width: 1100px) {
   
 .container {
 
   font-family: "Common Serif Regular", Times, serif;
-  font-size: 22px;
+  font-size: 20px;
   line-height: 1.25em;
   color: DimGray;
         
@@ -114,5 +186,19 @@ a:hover {
                     margin-top: 2vh;
          }
     
-  }
+ 
+
+  .projects {
+          
+              -webkit-column-count: 1;
+                 -moz-column-count: 1;
+                      column-count: 1;
+           
+              -webkit-column-gap: 20px;
+                 -moz-column-gap: 20px;
+                      column-gap: 20px;
+
+           }
+      
+    }
 
