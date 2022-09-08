@@ -198,18 +198,6 @@ a:hover {
 
   }
 
-  .caption {
-    margin-top:-0.65em;
-    padding-bottom:3.5em;
-    font-family: "True Sans Regular", Arial, sans-serif;
-    text-align: center;
-    font-size: .65em;
-    line-height: 1.25em;
-    -webkit-column-break-inside: avoid;
-    page-break-inside: avoid;
-    break-inside: avoid;
-  }
-
 
 
 
